@@ -1,6 +1,6 @@
 import React from 'react';
 import { View, StyleSheet, ImageBackground, Image, Text  } from 'react-native';
-import { DrawerContentScrollView, DrawerItemList, DrawerItem } from '@react-navigation/drawer'
+import { DrawerContentScrollView, DrawerItemList } from '@react-navigation/drawer'
 import { Ionicons, MaterialCommunityIcons } from '@expo/vector-icons'
 
 import defaultStyle from '../config/style'
@@ -8,11 +8,9 @@ import defaultStyle from '../config/style'
 const {  avatar, colors, text } = defaultStyle;
 
 function SideBar(props) {
-
-
   return (
     <View style={styles.container}>
-    <DrawerContentScrollView {...props}>
+      <DrawerContentScrollView {...props}>
         <ImageBackground source={require('../assets/bg1.jpeg')} style={styles.image}>
         <View style={styles.followers}>
           <Image source={require('../assets/avatar.jpeg')} style={avatar} />
@@ -30,8 +28,8 @@ function SideBar(props) {
       <View style={styles.container}>
         <DrawerItemList {...props} />
       </View>
-      </DrawerContentScrollView>
-      </View>
+     </DrawerContentScrollView>
+    </View>
   );
 }
 
