@@ -21,6 +21,7 @@ const Drawer = createDrawerNavigator();
 const AppDrawerNavigator = () => (
   <Drawer.Navigator
     drawerContent={(props) => <SideBar {...props} />}
+    hideStatusBar
     screenOptions={({ route }) => ({
       title: route.name,
       drawerIcon: ({ color }) => {

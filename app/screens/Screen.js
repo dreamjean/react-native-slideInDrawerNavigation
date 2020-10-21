@@ -8,8 +8,7 @@ const { colors, text } = defaultStyle;
 
 function Screen({navigation, name}) {
   return (
-    <View style={styles.container}>
-      <SafeAreaView style={styles.safeArea}>
+      <SafeAreaView style={styles.container}>
         <TouchableOpacity style={styles.button} onPress={navigation.openDrawer}>
           <FontAwesome name='bars' size={24} color={colors.grey} />
         </TouchableOpacity>
@@ -17,7 +16,6 @@ function Screen({navigation, name}) {
           <Text style={text.body}>{name} Screen</Text>
         </View>
       </SafeAreaView>
-    </View>
   );
 }
 
@@ -37,10 +35,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     justifyContent: 'center',
   },
-  safeArea: {
-    flex: 1,
 
-  },
 })
 
 export default Screen;
